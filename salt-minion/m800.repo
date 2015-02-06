@@ -1,0 +1,26 @@
+[M800-base]
+name=M800-$releasever - Base
+baseurl=http://192.168.0.7/centos/$releasever/os/$basearch/
+gpgcheck=0
+
+[M800-updates]
+name=M800-$releasever - Updates
+baseurl=http://192.168.0.7/centos/$releasever/updates/$basearch/
+gpgcheck=0
+
+[M800-extras]
+name=M800-$releasever - Extras
+baseurl=http://192.168.0.7/centos/$releasever/extras/$basearch/
+gpgcheck=0
+
+[M800-centosplus]
+name=M800-$releasever - Plus
+baseurl=http://192.168.0.7/centos/$releasever/centosplus/$basearch/
+gpgcheck=0
+enabled=0
+
+[M800-contrib]
+name=M800-$releasever - Contrib
+baseurl=http://192.168.0.7/centos/$releasever/contrib/$basearch/
+gpgcheck=0
+enabled=0
