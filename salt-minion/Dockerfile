@@ -1,5 +1,5 @@
 FROM centos:centos6
-MAINTAINER Ming Hsieh zanhsieh@gmail.com
+MAINTAINER Ming Hsieh <zanhsieh@gmail.com>
 
 # Do Salt install stuff and squeeze in a master.conf snippet that tells the minion
 # to contact the master specified.
@@ -8,8 +8,6 @@ MAINTAINER Ming Hsieh zanhsieh@gmail.com
 RUN rpm -Uvh  http://ftp.cuhk.edu.hk/pub/linux/fedora-epel/6/i386/epel-release-6-8.noarch.rpm
 
 RUN yum -y --enablerepo=epel-testing install salt-minion openssh-server cronie cronie-anacron rsyslog wget man && yum -y update && yum clean all
-ADD ./m800.repo /etc/yum.repos.d/
-ADD ./M800-epel.repo /etc/yum.repos.d/
 ADD ./epel.repo /etc/yum.repos.d/
 ADD ./epel-testing.repo /etc/yum.repos.d/
 
@@ -28,4 +26,3 @@ RUN sed -ri 's/^session\s+required\s+pam_loginuid.so$/session optional pam_login
 # the CMD process exits.
 
 CMD /sbin/init
-
