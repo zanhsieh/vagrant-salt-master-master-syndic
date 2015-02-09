@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rpm -ivh /vagrant/epel-release-6-8.noarch.rpm
+rpm –Uvh http://ftp.cuhk.edu.hk/pub/Linux/fedora-epel/6/i386/epel-release-6-8.noarch.rpm
 sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
 yum -y --enablerepo=epel update
 
