@@ -141,7 +141,7 @@ end
 
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "centos66"
+  config.vm.box = "centos67"
   config.vm.box_check_update = false
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = "box"
